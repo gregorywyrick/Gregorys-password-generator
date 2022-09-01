@@ -34,6 +34,12 @@ function generatePassword() {
     characterSelect += numbers;
   }
   console.log(characterSelect);
+  var userPassword = ""
+  for (var i = 0; i <= characterLength; i++) {
+    var randomNumber = Math.floor(Math.random() * characterSelect.length);
+    userPassword += characterSelect.substring(randomNumber, randomNumber +1);
+    console.log(userPassword);
+  }
 }
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
